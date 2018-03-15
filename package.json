@@ -1,0 +1,31 @@
+{
+  "name": "nebulae",
+  "version": "0.0.0",
+  "description": "Tools and code generators for microservices developed by Nebula Engineering (http://www.nebulae.com.co)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "nebulae": "bin/nebulae.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NebulaEngineering/nebulae.git"
+  },
+  "keywords": [
+    "NebulaE",
+    "microservice",
+    "tools",
+    "cli"
+  ],
+  "author": "sebastian.molano@nebulae.com.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NebulaEngineering/nebulae/issues"
+  },
+  "homepage": "https://github.com/NebulaEngineering/nebulae#readme",
+  "dependencies": {
+    "yargs": "^11.0.0"
+  }
+}
