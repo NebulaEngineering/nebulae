@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "nebulae": "bin/nebulae.js"
+    "nebulae": "bin/cli.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,12 @@
   },
   "homepage": "https://github.com/NebulaEngineering/nebulae#readme",
   "dependencies": {
+    "@google-cloud/datastore": "^1.3.5",
+    "@google-cloud/storage": "^1.6.0",
+    "git-root-dir": "^1.0.2",
+    "jsonfile": "^4.0.0",
+    "rxjs": "^5.5.7",
+    "tar": "^4.4.0",
     "yargs": "^11.0.0"
   }
 }
