@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+'use strict';
+
+// Provide a title to the process in `ps`.
+// Due to an obscure Mac bug, do not start this title with any symbol.
+process.title = 'ng';
 
 /*
 
@@ -19,6 +24,7 @@ $ nebulae register microapi      --microservice-id=test --file=mfe_file.json --s
       └─ microbackend.js
       └─ microapi.js
 */
+
 
 
 require('yargs')

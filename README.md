@@ -12,7 +12,7 @@ Assuming that Node.js is already installed & running,
 ```sh
 $ npm install -g nebulae
 ```
-## Install as dependencies
+## Install as dependency
 ```sh
 $ npm install nebulae
 ```
