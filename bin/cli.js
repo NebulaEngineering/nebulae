@@ -3,7 +3,7 @@
 
 // Provide a title to the process in `ps`.
 // Due to an obscure Mac bug, do not start this title with any symbol.
-process.title = 'ng';
+process.title = 'nebulae';
 
 /*
 

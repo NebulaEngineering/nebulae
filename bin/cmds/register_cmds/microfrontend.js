@@ -34,8 +34,14 @@ exports.handler = function (argv) {
             ).uploadMicroFrontend(argv['microservice-id'], argv['frontend-id'], argv.file)
                 .subscribe(
                     obj => console.log(`RESULT: ${JSON.stringify(obj)}`),
-                    e => console.error(`ERROR: ${e}`),
-                    () => console.log('COMPLETED')
+                    e => {
+                        console.error(`ERROR: ${e}`);
+                        process.exit(1);
+                    },
+                    () => {
+                        console.log('COMPLETED');
+                        process.exit(0);
+                    }
                 );;
     }
 
