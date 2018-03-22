@@ -1,21 +1,20 @@
 'use strict'
 
 const commons = require('../../cli-commons');
-const ProductionUiComposition = require('../../../lib/ui-composition/ProductionUiComposition');
+const DevelopmentUiComposition = require('../../../lib/ui-composition/DevelopmentUiComposition');
 
-exports.environment = 'production <shell-type> <shell-repo> <frontend-id> <output-dir> <store-type> [gcp-service-account-token]'
-exports.desc = 'Compose a FronEnd using all the registered Micro-Frontends on the Microservice Directory'
-exports.short = 'prod';
+exports.environment = 'development <shell-type> <shell-repo> <frontend-id> <output-dir> <setup-file>'
+exports.desc = 'Compose a FronEnd using the Micro-Frontends under development that are described at the setup file'
+exports.short = 'dev';
 exports.builder = {
     'shell-type': commons.parameters['shell-type'],
     'shell-repo': commons.parameters['shell-repo'],
     'frontend-id': commons.parameters['frontend-id'],
-    'output-dir': commons.parameters['output-dir'],
-    'store-type': commons.parameters['store-type'],
-    'gcp-service-account-token': commons.parameters['gcp-service-account-token'],
+    'output-dir': commons.parameters['output-dir'],    
+    'setup-file': commons.parameters['setup-file'],    
 }
 exports.handler = function (argv) {
-    if (!commons.validateParameterValue('shell-type', argv) || !commons.validateParameterValue('store-type', argv)) {
+    if (!commons.validateParameterValue('shell-type', argv)) {
         process.exit(1);
         return;
     }
@@ -23,9 +22,9 @@ exports.handler = function (argv) {
     shellType, shellRepo, frontEndId, outputDir,
         storeType, googleAppCredentials, namespace = 'core'
     */
-    new ProductionUiComposition({
+    new DevelopmentUiComposition({
         shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: argv['output-dir'],
-        storeType: argv['store-type'], googleAppCredentials: argv['gcp-service-account-token']
+        setupFiles: argv['setup-file']
     }).composeUI$().subscribe(
         (next) => {
             console.log((next instanceof Object) ? JSON.stringify(next, null, 1) : next);
