@@ -26,11 +26,18 @@ exports.handler = function (argv) {
         shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: argv['output-dir'],
         storeType: argv['store-type'], googleAppCredentials: argv['gcp-service-account-token']
     }).composeUI$().subscribe(
-        () => {
-            console.log(`Micro-Frontend result`);            
+        (next) => {
+            console.log((next instanceof Object) ? JSON.stringify(next, null, 1) : next);
         },
-        (error) => { console.error(error) },
-        () => console.log('Completes')
+        (error) => {
+            console.error('Failed to compose FrontEnd');
+            console.error(error);
+            process.exit(1);
+        },
+        () => {
+            console.log('FrontEnd had been downloaded, linked, assembled and built');
+            process.exit(0);
+        }
     );
 
 

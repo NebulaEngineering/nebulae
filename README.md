@@ -28,9 +28,9 @@ Options:
   --version                    Show version number                     [boolean]
   -h, --help                   Show help                               [boolean]
   --microservice-id            Microservice unique ID                 [required]
-  --frontend-id                Frontend identifier.  this is the Frontend that
-                               will host the micro-fronend            [required]
-  --setup-file                       setup file                             [required]
+  --frontend-id                Frontend identifier.  this is the Frontend
+                               hosting the micro-fronend              [required]
+  --setup-file                 setup file                             [required]
   --store-type                 Store type used as service directory. valid
                                types: GCP_DATASTORE                   [required]
   --gcp-service-account-token  Google cloud Platform service account JSON key
@@ -41,6 +41,31 @@ Options:
 ```
 Usage sample: 
 nebulae register microfrontend --microservice-id=ms_name --frontend-id=emi --setup-file=/full/path/to/mfe-setup.json --store-type=GCP_DATASTORE --gcp-service-account-token=/full/path/to/gcloud-service-key.json
+```
+
+## Client-side UI composition
+
+FrontEnds are composed of a single Shell and multiple Micro-FrontEnds.  The idea is to configure the frontend shell to host each Micro-FrontEnd.
+
+### Compose FrontEnd for production
+Compose a FronEnd using all the registered Micro-Frontends on the Microservice Directory
+```
+Usage sample: 
+nebulae compose-ui production --shell-type=FUSE2_ANGULAR --shell-repo=https://github.com/NebulaEngineering/lab-emi --frontend-id=emi --output-dir=/tmp/nebulae/emi/ --store-type=GCP_DATASTORE --gcp-service-account-token=../keycloak/etc/gcloud-service-key.json
+
+Options:
+  --version                    Show version number                     [boolean]
+  -h, --help                   Show help                               [boolean]
+  --shell-type                 UI Composition shell type.  Eg: FUSE2-ANGULAR
+                                                                      [required]
+  --shell-repo                 UI Composition shell repository location.  Eg:
+                               https://github.com/x/y.git             [required]
+  --frontend-id                Frontend identifier.  this is the Frontend
+                               hosting the micro-fronend              [required]
+  --output-dir                 directory to place the generated files [required]
+  --store-type                 Store type used as service directory. valid
+                               types: GCP_DATASTORE                   [required]
+  --gcp-service-account-token  Google cloud Platform service account JSON key
 ```
 
 ## Author & Contributors
