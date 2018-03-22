@@ -9,12 +9,19 @@ process.title = 'nebulae';
 
 Desired CLI:
 
+-- General --
 $ nebulae --help
-$ nebulae register --help
-$ nebulae register microfrontend --microservice-id=test --frontend-id=emi --file=mfe_file.json --store-type=GCP_DATASTORE --gcp-service-account-token=key.json
-$ nebulae register microbackend  --microservice-id=test --file=mbe_file.json --store-type=GCP_DATASTORE --gcp-service-account-token=key.json
-$ nebulae register microapi      --microservice-id=test --file=mfe_file.json --store-type=GCP_DATASTORE --gcp-service-account-token=key.json
 
+-- Register MicroService on the Microservice Directory --
+$ nebulae register --help
+$ nebulae register microfrontend --microservice-id=test --frontend-id=emi --setup-file=mfe_file.json --store-type=GCP_DATASTORE --gcp-service-account-token=key.json
+$ nebulae register microbackend  --microservice-id=test --setup-file=mbe_file.json --store-type=GCP_DATASTORE --gcp-service-account-token=key.json
+$ nebulae register microapi      --microservice-id=test --setup-file=mfe_file.json --store-type=GCP_DATASTORE --gcp-service-account-token=key.json
+
+-- Micro-Front end UI composition --
+$ nebulae compose-ui --help
+$ nebulae compose-ui development --shell-type=FUSE2_ANGULAR --shell-repo=https://github.com/x/y -frontend-id=emi --output-dir=/dist/dir --setup-files=mfe_a_file.json,mfe_b_file.json
+$ nebulae compose-ui production  --shell-type=FUSE2_ANGULAR --shell-repo=https://github.com/x/y -frontend-id=emi --output-dir=/dist/dir --store-type=GCP_DATASTORE --gcp-service-account-token=key.json
 
 ├─ cli.js
 └─ cmds/
@@ -23,6 +30,10 @@ $ nebulae register microapi      --microservice-id=test --file=mfe_file.json --s
       ├─ microfrontend.js
       └─ microbackend.js
       └─ microapi.js
+    ├─ compose-ui.js
+    └─ compose-ui_envs
+      ├─ development.js
+      ├─ production.js
 */
 
 

@@ -30,7 +30,7 @@ Options:
   --microservice-id            Microservice unique ID                 [required]
   --frontend-id                Frontend identifier.  this is the Frontend that
                                will host the micro-fronend            [required]
-  --file                       setup file                             [required]
+  --setup-file                       setup file                             [required]
   --store-type                 Store type used as service directory. valid
                                types: GCP_DATASTORE                   [required]
   --gcp-service-account-token  Google cloud Platform service account JSON key
@@ -40,7 +40,7 @@ Options:
 ### Register Micro-FrontEnd
 ```
 Usage sample: 
-nebulae register microfrontend --microservice-id=ms_name --frontend-id=emi --file=/full/path/to/mfe-setup.json --store-type=GCP_DATASTORE --gcp-service-account-token=/full/path/to/gcloud-service-key.json
+nebulae register microfrontend --microservice-id=ms_name --frontend-id=emi --setup-file=/full/path/to/mfe-setup.json --store-type=GCP_DATASTORE --gcp-service-account-token=/full/path/to/gcloud-service-key.json
 ```
 
 ## Author & Contributors

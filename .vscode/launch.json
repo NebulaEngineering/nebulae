@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Compose ui",
+            "program": "${workspaceFolder}/bin/cli.js",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "compose-ui",
+                "production",
+                "--shell-type=FUSE2_ANGULAR",
+                "--shell-repo=https://github.com/NebulaEngineering/lab-emi",
+                "--frontend-id=emi",
+                "--output-dir=/tmp/nebulae/emi/",
+                "--store-type=GCP_DATASTORE",
+                "--gcp-service-account-token=../keycloak/etc/gcloud-service-key.json"
+            ]
+        },
+        {
+            //nebulae register microfrontend --microservice-id=test --frontend-id=emi 
+            // --setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-sServices/profile/etc/mfe-setup.json
+            // --store-type=GCP_DATASTORE
+            // --gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/MicroServices/keycloak/etc/gcloud-service-key.json
+            "type": "node",
+            "request": "launch",
+            "name": "Register mfe",
+            "program": "${workspaceFolder}/bin/cli.js",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "register",
+                "microfrontend",
+                "--microservice-id=test",
+                "--frontend-id=emi",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-setup.json",
+                "--store-type=GCP_DATASTORE",
+                "--gcp-service-account-token=../keycloak/etc/gcloud-service-key.json"
+            ]
+        }
+    ]
+}
