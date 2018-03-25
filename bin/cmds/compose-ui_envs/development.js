@@ -2,6 +2,7 @@
 
 const commons = require('../../cli-commons');
 const DevelopmentUiComposition = require('../../../lib/ui-composition/DevelopmentUiComposition');
+const path = require('path');
 
 exports.environment = 'development <shell-type> <shell-repo> <frontend-id> <output-dir> <setup-file>'
 exports.desc = 'Compose a FronEnd using the Micro-Frontends under development that are described at the setup file'
@@ -23,7 +24,7 @@ exports.handler = function (argv) {
         storeType, googleAppCredentials, namespace = 'core'
     */
     new DevelopmentUiComposition({
-        shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: argv['output-dir'],
+        shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: path.resolve(argv['output-dir']),
         setupFiles: argv['setup-file']
     }).composeUI$().subscribe(
         (next) => {

@@ -1,6 +1,8 @@
 'use strict'
+
 const commons = require('../../cli-commons');
 const GcpServiceDirectory = require('../../../lib/register/GcpServiceDirectory');
+const path = require('path');
 
 exports.component = 'microfrontend <microservice-id> <frontend-id> <setup-file> <store-type> [gcp-service-account-token]'
 exports.desc = 'registers the micro-frontend setup file on the service registry of the Microservices environment'
@@ -23,7 +25,7 @@ exports.handler = function (argv) {
                 {
                     googleAppCredentials: argv['gcp-service-account-token'],
                 }
-            ).uploadMicroFrontend(argv['microservice-id'], argv['frontend-id'], argv['setup-file'])
+            ).uploadMicroFrontend(argv['microservice-id'], argv['frontend-id'], path.resolve(argv['setup-file']))
                 .subscribe(
                     obj => console.log(`RESULT: ${JSON.stringify(obj)}`),
                     e => {

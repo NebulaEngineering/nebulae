@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path');
 const commons = require('../../cli-commons');
 const ProductionUiComposition = require('../../../lib/ui-composition/ProductionUiComposition');
 
@@ -24,7 +25,7 @@ exports.handler = function (argv) {
         storeType, googleAppCredentials, namespace = 'core'
     */
     new ProductionUiComposition({
-        shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: argv['output-dir'],
+        shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: path.resolve(argv['output-dir']),
         storeType: argv['store-type'], googleAppCredentials: argv['gcp-service-account-token']
     }).composeUI$().subscribe(
         (next) => {
