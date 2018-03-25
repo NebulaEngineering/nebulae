@@ -50,7 +50,7 @@
                 "--frontend-id=emi",
                 "--setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-setup.json",
                 "--store-type=GCP_DATASTORE",
-                "--gcp-service-account-token=../keycloak/etc/gcloud-service-key.json"
+                "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/MicroServices/keycloak/etc/gcloud-service-key.json"
             ]
         }
     ]
