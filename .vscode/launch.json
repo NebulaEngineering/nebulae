@@ -3,11 +3,11 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "configurations": [    
         {
             "type": "node",
             "request": "launch",
-            "name": "Compose ui",
+            "name": "Compose ui PROD",
             "program": "${workspaceFolder}/bin/cli.js",
             "cwd": "${workspaceFolder}",
             "args": [
@@ -22,10 +22,22 @@
             ]
         },
         {
-            //nebulae register microfrontend --microservice-id=test --frontend-id=emi 
-            // --setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-sServices/profile/etc/mfe-setup.json
-            // --store-type=GCP_DATASTORE
-            // --gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/MicroServices/keycloak/etc/gcloud-service-key.json
+            "type": "node",
+            "request": "launch",
+            "name": "Compose ui DEV",
+            "program": "${workspaceFolder}/bin/cli.js",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "compose-ui",
+                "development",
+                "--shell-type=FUSE2_ANGULAR",
+                "--shell-repo=https://github.com/NebulaEngineering/lab-emi",
+                "--frontend-id=emi",
+                "--output-dir=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/dist/emi",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-setup.json",
+            ]
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Register mfe",
@@ -38,7 +50,7 @@
                 "--frontend-id=emi",
                 "--setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-setup.json",
                 "--store-type=GCP_DATASTORE",
-                "--gcp-service-account-token=../keycloak/etc/gcloud-service-key.json"
+                "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/MicroServices/keycloak/etc/gcloud-service-key.json"
             ]
         }
     ]
