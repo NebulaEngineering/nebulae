@@ -35,6 +35,7 @@
     "shelljs": "^0.8.1",
     "simple-git": "^1.92.0",
     "tar": "^4.4.0",
+    "xml2js": "^0.4.19",
     "yargs": "^11.0.0"
   },
   "devDependencies": {
