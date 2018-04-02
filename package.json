@@ -1,6 +1,6 @@
 {
   "name": "nebulae",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Tools and code generators for microservices developed by Nebula Engineering (http://www.nebulae.com.co)",
   "main": "index.js",
   "scripts": {
