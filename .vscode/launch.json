@@ -14,11 +14,11 @@
                 "compose-ui",
                 "production",
                 "--shell-type=FUSE2_ANGULAR",
-                "--shell-repo=https://github.com/NebulaEngineering/lab-emi",
+                "--shell-repo=https://github.com/nebulae-tpm/emi",
                 "--frontend-id=emi",
                 "--output-dir=/tmp/nebulae/emi/",
                 "--store-type=GCP_DATASTORE",
-                "--gcp-service-account-token=../keycloak/etc/gcloud-service-key.json"
+                "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/TPM/infrastructure/deployment/gcp/tokens/gcloud-service-key.json"
             ]
         },
         {
@@ -31,10 +31,10 @@
                 "compose-ui",
                 "development",
                 "--shell-type=FUSE2_ANGULAR",
-                "--shell-repo=https://github.com/NebulaEngineering/lab-emi",
+                "--shell-repo=https://github.com/nebulae-tpm/emi",
                 "--frontend-id=emi",
-                "--output-dir=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/dist/emi",
-                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-setup.json",
+                "--output-dir=/tmp/nebulae/emi",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/TPM/ms-devices-location/etc/mfe-setup.json",
             ]
         },
         {
@@ -46,11 +46,11 @@
             "args": [
                 "register",
                 "microfrontend",
-                "--microservice-id=test",
+                "--microservice-id=devices-location",
                 "--frontend-id=emi",
-                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/MicroServices/profile/etc/mfe-setup.json",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/TPM/ms-devices-location/etc/mfe-setup.json",
                 "--store-type=GCP_DATASTORE",
-                "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/MicroServices/keycloak/etc/gcloud-service-key.json"
+                "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/TPM/infrastructure/deployment/gcp/tokens/gcloud-service-key.json"
             ]
         }
     ]

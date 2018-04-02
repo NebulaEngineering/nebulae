@@ -25,9 +25,9 @@ exports.handler = function (argv) {
                 {
                     googleAppCredentials: argv['gcp-service-account-token'],
                 }
-            ).uploadMicroFrontend(argv['microservice-id'], argv['frontend-id'], path.resolve(argv['setup-file']))
+            ).uploadMicroFrontend$(argv['microservice-id'], argv['frontend-id'], path.resolve(argv['setup-file']))
                 .subscribe(
-                    obj => console.log(`RESULT: ${JSON.stringify(obj)}`),
+                    msg => console.log(msg),
                     e => {
                         console.error(`ERROR: ${e}`);
                         process.exit(1);
