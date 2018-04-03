@@ -34,7 +34,7 @@
                 "--shell-repo=https://github.com/nebulae-tpm/emi",
                 "--frontend-id=emi",
                 "--output-dir=/tmp/nebulae/emi",
-                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/TPM/ms-devices-location/etc/mfe-setup.json",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/TPM/ms-dashboard-devices/etc/mfe-setup.json",
             ]
         },
         {
