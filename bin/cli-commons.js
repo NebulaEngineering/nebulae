@@ -44,12 +44,24 @@ exports.parameters = {
     FrontEnd SHELL
     */
     'shell-type': {
-        description: 'UI Composition shell type.  Eg: FUSE2-ANGULAR',
+        description: 'UI Composition shell type.  Eg: FUSE2_ANGULAR',
         demand: 'must especify the shell-type to use',
     },
     'shell-repo': {
         description: 'UI Composition shell repository location.  Eg: https://github.com/x/y.git',
         demand: 'must especify the shell-repo to use',
+    },
+
+    /*
+    API SHELL
+    */
+    'api-type': {
+        description: 'API Composition shell type.  Eg: NEBULAE_GATEWAY',
+        demand: 'must especify the api-type to use',
+    },
+    'api-repo': {
+        description: 'API Composition shell repository location.  Eg: https://github.com/x/y.git',
+        demand: 'must especify the api-repo to use',
     },
 
 
@@ -75,6 +87,9 @@ exports.fixedArgumentsMap = fixedArgumentsMap = {
     },
     "shell-type": {
         'FUSE2_ANGULAR': [],
+    },
+    "api-type": {
+        'NEBULAE_GATEWAY': [],
     },
 };
 

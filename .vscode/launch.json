@@ -40,6 +40,39 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Compose API PROD",
+            "program": "${workspaceFolder}/bin/cli.js",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "compose-api",
+                "production",
+                "--api-type=NEBULAE_GATEWAY",
+                "--api-repo=https://github.com/nebulae-tpm/gateway",
+                "--api-id=gateway",
+                "--output-dir=/tmp/nebulae/gateway/",
+                "--store-type=GCP_DATASTORE",
+                "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/TPM/infrastructure/deployment/gcp/tokens/gcloud-service-key.json"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Compose API DEV",
+            "program": "${workspaceFolder}/bin/cli.js",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "compose-api",
+                "development",
+                "--api-type=NEBULAE_GATEWAY",
+                "--api-repo=https://github.com/nebulae-tpm/gateway",
+                "--api-id=gateway",
+                "--output-dir=/tmp/nebulae/gateway_dev",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/TPM/ms-dashboard-devices/etc/mapi-setup.json",
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Register mfe",
             "program": "${workspaceFolder}/bin/cli.js",
             "cwd": "${workspaceFolder}",
