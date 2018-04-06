@@ -30,6 +30,10 @@ exports.parameters = {
         description: 'Frontend identifier.  this is the Frontend hosting the micro-fronend',
         demand: 'must especify the frontend id',
     },
+    'api-id': {
+        description: 'API identifier.  this is the API hosting the micro-api',
+        demand: 'must especify the API id',
+    },
     'setup-file': {
         description: 'setup file',
         demand: 'must especify the setup file',

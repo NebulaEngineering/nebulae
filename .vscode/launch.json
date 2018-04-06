@@ -52,6 +52,22 @@
                 "--store-type=GCP_DATASTORE",
                 "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/TPM/infrastructure/deployment/gcp/tokens/gcloud-service-key.json"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Register api",
+            "program": "${workspaceFolder}/bin/cli.js",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "register",
+                "microapi",
+                "--microservice-id=devices-location",
+                "--api-id=gateway",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/TPM/ms-dashboard-devices/etc/mapi-setup.json",
+                "--store-type=GCP_DATASTORE",
+                "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/TPM/infrastructure/deployment/gcp/tokens/gcloud-service-key.json"
+            ]
         }
     ]
 }

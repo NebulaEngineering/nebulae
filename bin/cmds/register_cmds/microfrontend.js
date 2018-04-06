@@ -13,7 +13,6 @@ exports.builder = {
     'setup-file': commons.parameters['setup-file'],
     'store-type': commons.parameters['store-type'],
     'gcp-service-account-token': commons.parameters['gcp-service-account-token'],
-    'gcp-proyect-id': commons.parameters['gcp-proyect-id']
 }
 exports.handler = function (argv) {
     if (!commons.validateParameterValue('store-type', argv)) {
