@@ -1,8 +1,17 @@
 # NebulaE [![GitHub version](http://img.shields.io/badge/version-0.0.3-brightgreen.svg)](https://github.com/hegdeashwin/nebula/releases)
 
 
+
+
 NebulaE is a compendium of code generators and tools to help build and deploy cloud native Microservices.  
 The cli is meant to replace scripts needed to update datastores, upload files, configure environments and in the long run it will offer code generation to build back-ends, front-ends and middleware for microservices.
+
+
+NOTE: 
+Project and Readme under construction  
+The goal is to achieve an entire MicroService Framework, easy enough to build a Microservice Paltform under a day and create microservices shells under minutes.  
+
+
 
 # Installation
 
@@ -10,11 +19,7 @@ Assuming that Node.js is already installed & running,
 
 ## Install as CLI
 ```sh
-$ npm install -g nebulae
-```
-## Install as dependency
-```sh
-$ npm install nebulae
+$ npm install -g @nebulae/cli
 ```
 
 # Command Line Interface
@@ -98,8 +103,18 @@ Options:
 Developed &amp; maintained by author: <b>Sebastian Molano on behalf of Nebula Engineering SAS</b><br>
 Follow Nebula Engineering at: <a href="https://github.com/NebulaEngineering" target="_blank">github</a>
 
-## License
+# License <a name="license"></a>
 
-The MIT License (MIT)
+Copyright 2018 Nebula Engineering SAS
 
-Copyright (c) 2018 Nebula Engineering SAS
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
