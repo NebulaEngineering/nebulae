@@ -101,6 +101,22 @@
                 "--store-type=GCP_DATASTORE",
                 "--gcp-service-account-token=/Users/sebastianmolano/NebulaE/Projects/TPM/infrastructure/deployment/gcp/tokens/gcloud-service-key.json"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "generate microservice",
+            "program": "${workspaceFolder}/bin/cli.js",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "generate",
+                "microservice",
+                "--frontend-id=emi",
+                "--api-id=gateway",
+                "--project-context=PYXIS",
+                "--template-git-url=https://github.com/NebulaEngineering/ms-template.git",
+                "--repo-git-url=https://github.com/nebulae-pyxis/ms-acss-channel-afcc-reload.git"
+            ]
         }
     ]
 }

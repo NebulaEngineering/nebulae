@@ -64,6 +64,19 @@ exports.parameters = {
         demand: 'must especify the api-repo to use',
     },
 
+    /*
+    GENERATORS
+    */
+   'template-git-url': {
+        description: 'Template git repo URL.  eg: https://github.com/NebulaEngineering/ms-template.git',
+        demand: 'must especify template git url',
+        short: 'tgu',
+    },
+   'repo-git-url': {
+        description: 'repo git repo URL.  eg: https://github.com/nebulae-tpm/ms-device-manager.git',
+        demand: 'must especify repo git url',
+        short: 'rgu',
+    },
 
     /*
     OTHERs
