@@ -31,7 +31,7 @@ exports.handler = function (argv) {
         },
         () => {
             console.log('COMPLETED');
-            processs.exit(0);
+            process.exit(0);
         }
     );
 }
