@@ -107,7 +107,7 @@
             "request": "launch",
             "name": "generate microservice",
             "program": "${workspaceFolder}/bin/cli.js",
-            "cwd": "${workspaceFolder}",
+            "cwd": "/Users/sebastianmolano/NebulaE/Projects/pyxis/",
             "args": [
                 "generate",
                 "microservice",
@@ -115,7 +115,7 @@
                 "--api-id=gateway",
                 "--project-context=PYXIS",
                 "--template-git-url=https://github.com/NebulaEngineering/ms-template.git",
-                "--repo-git-url=https://github.com/nebulae-pyxis/ms-acss-channel-afcc-reload.git"
+                "--repo-git-url=https://github.com/nebulae-pyxis/ms-business-wallet.git"
             ]
         }
     ]

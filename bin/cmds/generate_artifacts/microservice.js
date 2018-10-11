@@ -26,7 +26,7 @@ exports.handler = function (argv) {
     }).subscribe(
         msg => console.log(msg),
         e => {
-            console.error(`ERROR: ${e}`);
+            console.error(e.stack || e);
             process.exit(1);
         },
         () => {
