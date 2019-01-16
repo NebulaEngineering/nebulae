@@ -77,6 +77,10 @@ exports.parameters = {
         demand: 'must especify repo git url',
         short: 'rgu',
     },
+   'crud-entity': {
+        description: '(Optional), if using CRUD template, this is the name (singular) of the entity to CRUD',        
+        short: 'crudent',
+    },
 
     /*
     OTHERs
