@@ -1,6 +1,6 @@
 {
   "name": "@nebulae/cli",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Tools and code generators for microservices developed by Nebula Engineering (http://www.nebulae.com.co)",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,7 @@
     "node-html-parser": "^1.1.6",
     "pluralize": "^7.0.0",
     "replace-in-file": "^3.4.2",
+    "replace-last": "^1.2.6",
     "rimraf": "^2.6.2",
     "rxjs": "^5.5.7",
     "shelljs": "^0.8.1",
