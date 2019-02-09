@@ -4,7 +4,7 @@ const path = require('path');
 const commons = require('../../cli-commons');
 const ProductionUiComposition = require('../../../lib/ui-composition/ProductionUiComposition');
 
-exports.environment = 'production <shell-type> <shell-repo> <frontend-id> <output-dir> <store-type> [gcp-service-account-token]'
+exports.environment = 'production <shell-type> <shell-repo> <frontend-id> <output-dir> <store-type> [gcp-service-account-token] [finalEnvFile]'
 exports.desc = 'Compose a FronEnd using all the registered Micro-Frontends on the Microservice Directory'
 exports.short = 'prod';
 exports.builder = {
@@ -14,6 +14,7 @@ exports.builder = {
     'output-dir': commons.parameters['output-dir'],
     'store-type': commons.parameters['store-type'],
     'gcp-service-account-token': commons.parameters['gcp-service-account-token'],
+    'shell-finalEnvFile': commons.parameters['shell-finalEnvFile'],
 }
 exports.handler = function (argv) {
     if (!commons.validateParameterValue('shell-type', argv) || !commons.validateParameterValue('store-type', argv)) {
@@ -26,7 +27,7 @@ exports.handler = function (argv) {
     */
     new ProductionUiComposition({
         shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: path.resolve(argv['output-dir']),
-        storeType: argv['store-type'], googleAppCredentials: argv['gcp-service-account-token']
+        storeType: argv['store-type'], googleAppCredentials: argv['gcp-service-account-token'], finalEnvFile: argv['shell-finalEnvFile']
     }).composeUI$().subscribe(
         (next) => {
             console.log((next instanceof Object) ? JSON.stringify(next, null, 1) : next);

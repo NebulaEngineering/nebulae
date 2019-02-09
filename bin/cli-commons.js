@@ -51,6 +51,9 @@ exports.parameters = {
         description: 'UI Composition shell repository location.  Eg: https://github.com/x/y.git',
         demand: 'must especify the shell-repo to use',
     },
+    'shell-finalEnvFile': {
+        description: 'Env file to use when building ng project',
+    },
 
     /*
     API SHELL
