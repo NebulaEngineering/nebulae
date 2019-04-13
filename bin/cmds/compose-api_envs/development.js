@@ -4,7 +4,7 @@ const commons = require('../../cli-commons');
 const DevelopmentApiComposition = require('../../../lib/api-composition/DevelopmentApiComposition');
 const path = require('path');
 
-exports.environment = 'development <api-type> <api-repo> <api-id> <output-dir> <setup-file> [api-repo-branch] [api-repo-user] [api-repo-psw] [api-repo-registry]'
+exports.environment = 'development <api-type> <api-repo> <api-id> <output-dir> <setup-file> [api-repo-branch] [api-repo-user] [api-repo-psw]'
 exports.desc = 'Compose a FronEnd using the Micro-apis under development that are described at the setup file'
 exports.short = 'dev';
 exports.builder = {
@@ -16,7 +16,6 @@ exports.builder = {
     'api-repo-branch': commons.parameters['api-repo-branch'],
     'api-repo-user': commons.parameters['api-repo-user'],
     'api-repo-psw': commons.parameters['api-repo-psw'],
-    'api-repo-registry': commons.parameters['api-repo-registry'],   
 }
 exports.handler = function (argv) {
     if (!commons.validateParameterValue('api-type', argv)) {
@@ -30,7 +29,7 @@ exports.handler = function (argv) {
     new DevelopmentApiComposition({
         apiType: argv['api-type'], apiRepo: argv['api-repo'], apiId: argv['api-id'], outputDir: path.resolve(argv['output-dir']),
         setupFiles: argv['setup-file'],
-        apiRepoBranch: argv['api-repo-branch'], apiRepoUser: argv['api-repo-user'], apiRepoPsw: argv['api-repo-psw'], apiRepoRegistry: argv['api-repo-registry']
+        apiRepoBranch: argv['api-repo-branch'], apiRepoUser: argv['api-repo-user'], apiRepoPsw: argv['api-repo-psw']
     }).composeUI$().subscribe(
         (next) => {
             console.log((next instanceof Object) ? JSON.stringify(next, null, 1) : next);
