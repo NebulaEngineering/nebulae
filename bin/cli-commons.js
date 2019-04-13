@@ -66,6 +66,19 @@ exports.parameters = {
         description: 'API Composition shell repository location.  Eg: https://github.com/x/y.git',
         demand: 'must especify the api-repo to use',
     },
+    'api-repo-branch': {
+        description: 'API Composition shell repository branch.  Eg: master.  defaults to master',
+    },
+    'api-repo-user': {
+        description: 'API Composition shell repository registry user.  Eg: some.user',
+    },
+    'api-repo-psw': {
+        description: 'API Composition shell repository registry user password/acces-token.  Eg: xyz.098',
+    },
+    'api-repo-registry': {
+        description: 'API Composition shell repository registry.  Eg: registry.gitlab.com  - defaults to github',
+        demand: 'must especify the api-repo to use',
+    },
 
     /*
     GENERATORS

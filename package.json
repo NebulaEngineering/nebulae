@@ -1,6 +1,6 @@
 {
   "name": "@nebulae/cli",
-  "version": "0.3.14",
+  "version": "0.3.15",
   "description": "Tools and code generators for microservices developed by Nebula Engineering (http://www.nebulae.com.co)",
   "main": "index.js",
   "scripts": {
