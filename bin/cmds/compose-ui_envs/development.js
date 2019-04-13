@@ -4,7 +4,7 @@ const commons = require('../../cli-commons');
 const DevelopmentUiComposition = require('../../../lib/ui-composition/DevelopmentUiComposition');
 const path = require('path');
 
-exports.environment = 'development <shell-type> <shell-repo> <frontend-id> <output-dir> <setup-file>'
+exports.environment = 'development <shell-type> <shell-repo> <frontend-id> <output-dir> <setup-file> [shell-repo-branch] [shell-repo-user] [shell-repo-psw]'
 exports.desc = 'Compose a FronEnd using the Micro-Frontends under development that are described at the setup file'
 exports.short = 'dev';
 exports.builder = {
@@ -13,6 +13,9 @@ exports.builder = {
     'frontend-id': commons.parameters['frontend-id'],
     'output-dir': commons.parameters['output-dir'],    
     'setup-file': commons.parameters['setup-file'],    
+    'shell-repo-branch': commons.parameters['shell-repo-branch'],
+    'shell-repo-user': commons.parameters['shell-repo-user'],
+    'shell-repo-psw': commons.parameters['shell-repo-psw'],
 }
 exports.handler = function (argv) {
     if (!commons.validateParameterValue('shell-type', argv)) {
@@ -25,7 +28,8 @@ exports.handler = function (argv) {
     */
     new DevelopmentUiComposition({
         shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: path.resolve(argv['output-dir']),
-        setupFiles: argv['setup-file']
+        setupFiles: argv['setup-file'],
+        shellRepoBranch: argv['shell-repo-branch'], shellRepoUser: argv['shell-repo-user'], shellRepoPsw: argv['shell-repo-psw']
     }).composeUI$().subscribe(
         (next) => {
             console.log((next instanceof Object) ? JSON.stringify(next, null, 1) : next);

@@ -4,7 +4,7 @@ const path = require('path');
 const commons = require('../../cli-commons');
 const ProductionUiComposition = require('../../../lib/ui-composition/ProductionUiComposition');
 
-exports.environment = 'production <shell-type> <shell-repo> <frontend-id> <output-dir> <store-type> [gcp-service-account-token] [finalEnvFile]'
+exports.environment = 'production <shell-type> <shell-repo> <frontend-id> <output-dir> <store-type> [gcp-service-account-token] [finalEnvFile] [shell-repo-branch] [shell-repo-user] [shell-repo-psw]'
 exports.desc = 'Compose a FronEnd using all the registered Micro-Frontends on the Microservice Directory'
 exports.short = 'prod';
 exports.builder = {
@@ -15,6 +15,9 @@ exports.builder = {
     'store-type': commons.parameters['store-type'],
     'gcp-service-account-token': commons.parameters['gcp-service-account-token'],
     'shell-finalEnvFile': commons.parameters['shell-finalEnvFile'],
+    'shell-repo-branch': commons.parameters['shell-repo-branch'],
+    'shell-repo-user': commons.parameters['shell-repo-user'],
+    'shell-repo-psw': commons.parameters['shell-repo-psw'],
 }
 exports.handler = function (argv) {
     if (!commons.validateParameterValue('shell-type', argv) || !commons.validateParameterValue('store-type', argv)) {
@@ -27,7 +30,8 @@ exports.handler = function (argv) {
     */
     new ProductionUiComposition({
         shellType: argv['shell-type'], shellRepo: argv['shell-repo'], frontEndId: argv['frontend-id'], outputDir: path.resolve(argv['output-dir']),
-        storeType: argv['store-type'], googleAppCredentials: argv['gcp-service-account-token'], finalEnvFile: argv['shell-finalEnvFile']
+        storeType: argv['store-type'], googleAppCredentials: argv['gcp-service-account-token'], finalEnvFile: argv['shell-finalEnvFile'],
+        shellRepoBranch: argv['shell-repo-branch'], shellRepoUser: argv['shell-repo-user'], shellRepoPsw: argv['shell-repo-psw']
     }).composeUI$().subscribe(
         (next) => {
             console.log((next instanceof Object) ? JSON.stringify(next, null, 1) : next);

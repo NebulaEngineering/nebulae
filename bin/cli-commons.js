@@ -54,6 +54,19 @@ exports.parameters = {
     'shell-finalEnvFile': {
         description: 'Env file to use when building ng project',
     },
+    'shell-repo-branch': {
+        description: 'UI Composition shell repository branch.  Eg: master.  defaults to master',
+        requiresArg: false,
+    },
+    'shell-repo-user': {
+        description: 'UI Composition shell repository registry user.  Eg: some.user',
+        requiresArg: false,
+    },
+    'shell-repo-psw': {
+        description: 'UI Composition shell repository registry user password/acces-token.  Eg: xyz.098',
+        requiresArg: false,
+    },
+
 
     /*
     API SHELL
