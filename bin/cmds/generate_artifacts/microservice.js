@@ -1,7 +1,7 @@
 const commons = require('../../cli-commons');
 const MicroserviceGenerator = require('../../../lib/code-generator/MicroserviceGenerator');
 
-exports.component = 'artifact <frontend-id> <api-id> <project_context> <template-git-url> <repo-git-url>  [crud-entity] '
+exports.component = 'artifact <frontend-id> <api-id> <project_context> <template-git-url> <repo-git-url>  [crud-entity] <git-repo-directory-path>'
 exports.desc = 'generates basic microservice from template'
 exports.short = 'ms';
 exports.builder = {
@@ -11,6 +11,7 @@ exports.builder = {
     'template-git-url': commons.parameters['template-git-url'],
     'repo-git-url': commons.parameters['repo-git-url'],
     'crud-entity': commons.parameters['crud-entity'],
+    'git-repo-directory-path': commons.parameters['git-repo-directory-path'],
 }
 exports.handler = function (argv) {
     const generator = new MicroserviceGenerator();
@@ -20,7 +21,8 @@ exports.handler = function (argv) {
         projectContext: argv['project-context'],
         templateGitUrl: argv['template-git-url'],
         repoGitUrl: argv['repo-git-url'],
-        entity: argv['crud-entity'] || 'entity'
+        entity: argv['crud-entity'] || 'entity',
+        gitRepoDirectoryPath: argv['git-repo-directory-path'],
     }).subscribe(
         msg => console.log(msg),
         e => {

@@ -115,7 +115,8 @@
                 "--api-id=gateway",
                 "--project-context=PYXIS",
                 "--template-git-url=https://github.com/NebulaEngineering/ms-template.git",
-                "--repo-git-url=https://github.com/nebulae-pyxis/ms-business-wallet.git"
+                "--repo-git-url=https://github.com/nebulae-pyxis/ms-business-wallet.git",
+                "--git-repo-directory-path=one-nebula/super-van-plus"
             ]
         }
     ]

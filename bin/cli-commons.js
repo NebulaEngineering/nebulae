@@ -109,7 +109,11 @@ exports.parameters = {
         description: '(Optional), if using CRUD template, this is the name (singular) of the entity to CRUD',        
         short: 'crudent',
     },
-
+    'git-repo-directory-path': {
+        description: 'git repo directory path.  eg: one-nebula/super-van-plus',
+        demand: 'must especify git repo directory path',
+        short: 'grp',
+    },
     /*
     OTHERs
     */
