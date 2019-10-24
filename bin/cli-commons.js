@@ -136,6 +136,7 @@ exports.fixedArgumentsMap = fixedArgumentsMap = {
     },
     "shell-type": {
         'FUSE2_ANGULAR': [],
+        'FUSE_REACT': [],
     },
     "api-type": {
         'NEBULAE_GATEWAY': [],
