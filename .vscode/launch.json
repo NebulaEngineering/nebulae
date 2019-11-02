@@ -47,10 +47,10 @@
                 "compose-ui",
                 "development",
                 "--shell-type=FUSE_REACT",
-                "--shell-repo=https://gitlab.com/lighthouse-advisory/sandbox/lab1/emi-react.git",
-                "--frontend-id=emi-react",
-                "--output-dir=/Users/sebastianmolano/NebulaE/Projects/LIGHTHOUSE/lab1/ms-tutorial/playground/emi-react",
-                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/LIGHTHOUSE/lab1/ms-tutorial/etc/mfe-react-setup.json",
+                "--shell-repo=https://gitlab.com/lighthouse-advisory/sandbox/lab1/emi.git",
+                "--frontend-id=emi",
+                "--output-dir=/Users/sebastianmolano/NebulaE/Projects/LIGHTHOUSE/lab1/ms-micro-service-template/playground/emi",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/LIGHTHOUSE/lab1/ms-micro-service-template/etc/mfe-setup.json",
             ]
         },
         {
@@ -107,16 +107,17 @@
             "request": "launch",
             "name": "generate microservice",
             "program": "${workspaceFolder}/bin/cli.js",
-            "cwd": "/Users/sebastianmolano/NebulaE/Projects/pyxis/",
+            "cwd": "/Users/sebastianmolano/NebulaE/Projects/LIGHTHOUSE/",
             "args": [
                 "generate",
                 "microservice",
                 "--frontend-id=emi",
-                "--api-id=gateway",
-                "--project-context=PYXIS",
-                "--template-git-url=https://github.com/NebulaEngineering/ms-template.git",
-                "--repo-git-url=https://github.com/nebulae-pyxis/ms-business-wallet.git",
-                "--git-repo-directory-path=one-nebula/super-van-plus"
+                "--api-id=emi-gateway",
+                "--project-context=LIGHTHOUSE",
+                "--template-git-url=https://gitlab.com/lighthouse-advisory/sandbox/lab1/ms-micro-service-template",
+                "--repo-git-url=https://gitlab.com/lighthouse-advisory/sandbox/lab1/ms-location-mng.git",
+                "--git-repo-directory-path=lighthouse-advisory/sandbox/lab1",
+                "--crud-entity=smart-phone"
             ]
         }
     ]
