@@ -7,8 +7,6 @@ The cli is meant to replace scripts needed to update datastores, upload files, c
 
 # Table of contents
 
-- [NebulaE ![GitHub version](https://github.com/hegdeashwin/nebula/releases)](#nebulae-img-srchttpimgshieldsiobadgeversion-050-brightgreensvg-altgithub-version)
-- [Table of contents](#table-of-contents)
 - [Installation](#installation)
   - [Install as CLI](#install-as-cli)
 - [Command Line Interface](#command-line-interface)
@@ -20,6 +18,10 @@ The cli is meant to replace scripts needed to update datastores, upload files, c
   - [Domain Driven Design](#domain-driven-design)
   - [CQRS & Event-Sourcing](#cqrs--event-sourcing)
   - [FullStack MicroServices](#fullstack-microservices)
+  - [MicroService data-flow](#microservice-data-flow)
+    - [READ: Querying data on the materialized view](#read-querying-data-on-the-materialized-view)
+    - [WRITE (Pure CQRS/ES)](#write-pure-cqrses)
+    - [WRITE (CRUD Strategy + ES)](#write-crud-strategy--es)
 - [Development Environment Setup](#development-environment-setup)
   - [Dev machine requiremnets](#dev-machine-requiremnets)
   - [Micro-Service generation from Template](#micro-service-generation-from-template)
