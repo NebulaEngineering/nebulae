@@ -7,7 +7,6 @@ The cli is meant to replace scripts needed to update datastores, upload files, c
 
 # Table of contents
 
-- [NebulaE ![GitHub version](https://github.com/hegdeashwin/nebula/releases)](#nebulae-img-srchttpimgshieldsiobadgeversion-050-brightgreensvg-altgithub-version)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
   - [Install as CLI](#install-as-cli)
@@ -250,7 +249,7 @@ nebulae generate microservice --frontend-id emi --api-id emi-gateway --project-c
 Where: 
 - '[Micro-SERVICE-NAME]' => MicroServices name.   should start with "ms-"  and then the name you choose. Please use hyphen (-) for composed names.  Valid examples:
   - ms-interview
-  - ms-interview-jhon-dow
+  - ms-interview-jhon-doe
   - ms-some-name
 
 - [AGGREGATE-NAME] => CRUD aggregate name.  Valid examples:
