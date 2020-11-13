@@ -7,7 +7,6 @@ The cli is meant to replace scripts needed to update datastores, upload files, c
 
 # Table of contents
 
-- [Table of contents](#table-of-contents)
 - [Installation](#installation)
   - [Install as CLI](#install-as-cli)
 - [Command Line Interface](#command-line-interface)
