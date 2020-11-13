@@ -75,17 +75,17 @@
             "request": "launch",
             "name": "Compose API DEV",
             "program": "${workspaceFolder}/bin/cli.js",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}",            
             "args": [
                 "compose-api",
                 "development",
                 "--api-type=NEBULAE_GATEWAY",
-                "--api-repo=https://github.com/nebulae-tpm/gateway",
-                "--api-id=gateway",
-                "--output-dir=/tmp/nebulae/gateway_dev",
-                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/TPM/ms-dashboard-devices/etc/mapi-setup.json",
+                "--api-repo=https://gitlab.com/nebulaeng/fleet/external-system-gateway.git",
+                "--api-id=external-system-gateway",
+                "--output-dir=/tmp/nebulae/external-system-gateway/",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/FLEET/ms-organization-mng/etc/mapi-ext-setup.json"
             ]
-        },        
+        },  
         {
             "type": "node",
             "request": "launch",
