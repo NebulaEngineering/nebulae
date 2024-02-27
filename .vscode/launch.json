@@ -49,8 +49,8 @@
                 "--shell-type=FUSE_REACT",
                 "--shell-repo=https://gitlab.com/lighthouse-advisory/sandbox/lab1/emi.git",
                 "--frontend-id=emi",
-                "--output-dir=/Users/sebastianmolano/NebulaE/Projects/LIGHTHOUSE/lab1/ms-micro-service-template/playground/emi",
-                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/LIGHTHOUSE/lab1/ms-micro-service-template/etc/mfe-setup.json",
+                "--output-dir=/Users/sebastianmolano/NebulaE/Projects/FLEET/full-stack-environment/emi/emi",
+                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/FLEET/full-stack-environment/emi/source/etc/mfe-setup.json",
             ]
         },
         {
