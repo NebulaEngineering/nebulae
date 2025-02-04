@@ -1,5 +1,5 @@
 ![NebulaE](docs/images/nebula.png "Nebula Engineering SAS")
-# NebulaE [![GitHub version](http://img.shields.io/badge/version-0.5.0-brightgreen.svg)](https://github.com/hegdeashwin/nebula/releases)
+# NebulaE 
 
 
 NebulaE is a compendium of code generators and tools to help build and deploy cloud native Microservices.  
@@ -282,7 +282,6 @@ From here two simultaneous flows are opened, one to indicate to the user that th
 ### WRITE (CRUD Strategy + ES)
 CRUD Strategy + ES is intended for data-centric µServices, the idea is to combine a CRUD strategy instead of CQRS and generate domian-event every time an Aggregate changes in order keep updated other µServices
 
-<span style="color:red">**NOTE: This is the strategy used on the interview project**</span>
 
 Writing data on the materialized-view and publishing the event-domain:
 

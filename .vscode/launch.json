@@ -75,15 +75,16 @@
             "request": "launch",
             "name": "Compose API DEV",
             "program": "${workspaceFolder}/bin/cli.js",
-            "cwd": "${workspaceFolder}",            
+            "cwd": "/Users/sebastianmolano/NebulaE/Projects/FLEET/integrated-local-environment/emi-gateway/merged-projects/playground",      
+            "runtimeVersion": "10",      
             "args": [
                 "compose-api",
                 "development",
                 "--api-type=NEBULAE_GATEWAY",
-                "--api-repo=https://gitlab.com/nebulaeng/fleet/external-system-gateway.git",
-                "--api-id=external-system-gateway",
-                "--output-dir=/tmp/nebulae/external-system-gateway/",
-                "--setup-file=/Users/sebastianmolano/NebulaE/Projects/FLEET/ms-organization-mng/etc/mapi-ext-setup.json"
+                "--api-repo=git@gitlab.com:nebulaeng/fleet/emi-gateway.git",
+                "--api-id=emi-gateway",
+                "--output-dir=emi-gateway",
+                "--setup-file=../etc/mapi-setup.json"
             ]
         },  
         {
